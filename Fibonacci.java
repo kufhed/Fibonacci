@@ -11,7 +11,7 @@
 import java.util.Scanner;
 
 public class Fibonacci {
-
+   int hasil[];
    public static void main(String[] args) {
        Scanner s = new Scanner(System.in);
        System.out.print("Enter the value of n: ");
@@ -20,20 +20,25 @@ public class Fibonacci {
    }
 
    public static void fibonacci(int n) {
+      hasil=ne wint[n];
        if (n == 0) {
            System.out.println("0");
        } else if (n == 1) {
            System.out.println("0 1");
        } else {
-           System.out.print("0 1 ");
            int a = 0;
            int b = 1;
            for (int i = 1; i < n; i++) {
                int nextNumber = a + b;
-               System.out.print(nextNumber + " ");
+               hasil[i]=nextNumber;
                a = b;
                b = nextNumber;
            }
+           for(int i=n; i>0; i++)
+           {
+              System.out.println(hasil[i]);
+           }
+           System.out.prinln("1 0");
        }
    }
 }
